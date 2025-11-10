@@ -1,49 +1,18 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-
-const formSchema = z.object({
-  post: z.string().min(200).max(800),
-})
+import PostForm from "@/components/PostForm"
 
 const NewPostForm = () => {
-    // Form definition
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-        post: "",
-        },
-    })
-
-    // Submit handler
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values)
+    const handleSubmit = () => {
+        console.log("data")
     }
 
     return (
-        <div>
-            <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                <FormField
-                    control={form.control}
-                    name="post"
-                    render={({ field }) => (
-                    <FormItem>
-                        <FormLabel>Blog Post</FormLabel>
-                        <FormControl>
-                        <Input placeholder="Add post" {...field} type="text"/>
-                        </FormControl>
-                    </FormItem>
-                    )}
-                />
-                <Button type="submit" variant="outline">Submit</Button>
-                </form>
-            </Form>
+        <div className="px-24">
+            <PostForm 
+                handleSubmit={handleSubmit} 
+                submitButtonLabel="Add Post"
+            />
         </div>
     )
 }
