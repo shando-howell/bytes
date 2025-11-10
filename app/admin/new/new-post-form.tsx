@@ -1,10 +1,12 @@
 "use client"
 
 import PostForm from "@/components/PostForm"
+import { postDataSchema } from "@/validation/postSchema"
+import { z } from "zod"
 
 const NewPostForm = () => {
-    const handleSubmit = () => {
-        console.log("data")
+    const handleSubmit = async (data: z.infer<typeof postDataSchema>) => {
+        console.log({ data });
     }
 
     return (

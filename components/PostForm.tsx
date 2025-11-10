@@ -69,7 +69,7 @@ export default function PostForm({ handleSubmit, submitButtonLabel }: Props) {
                         )}
                     />
 
-                    <Button type="submit" variant="outline">{submitButtonLabel}</Button>
+                    <Button type="submit" className="max-w-md mx-auto mt-2 w-full flex gap-2">{submitButtonLabel}</Button>
                 </form>
             </Form>
         </div>
