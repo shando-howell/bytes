@@ -1,6 +1,0 @@
-export const posts = [{
-    id: "01",
-    title: "What is Snap Dragon? - My first post.",
-    body: "I've always been a fan of technology and in my persuit of a career in Software Engineering, here I go, building this blog to explore technologies, both old a new. The first technology I want to explore is the Snap Dragon processor, what is the Snap Dragon processor. Snap Dragon is known as a System on a Chip (SoC) processor. The reason it is called an SoC is because it integrates the CPU, GPU and modem onto a single chip which yields better performance and power efficiency. This powerful processor was designed by Qualcomm and is found in devices such as smartphones, tablets, laptops and even vehicles. This chip is able to deliver premium performance, from everyday tasks to immersive gaming. With integrated GPUs, they are able to provide high-quality graphics for gaming and media. The chip also features a dedicated AI engine and Neural Processing Unit (NPU) for on-device AI features. An example of a smartphone which uses this powerful processor is the Samsung Galaxy S25 Ultra which features Galaxy AI.",
-    imageUrl: "/images/Snap-Dragon-Porcessor.jpg"
-}]

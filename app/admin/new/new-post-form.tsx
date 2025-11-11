@@ -3,10 +3,12 @@
 import PostForm from "@/components/PostForm"
 import { postDataSchema } from "@/validation/postSchema"
 import { z } from "zod"
+import { saveNewPost } from "./actions"
 
 const NewPostForm = () => {
     const handleSubmit = async (data: z.infer<typeof postDataSchema>) => {
-        console.log({ data });
+        const response = await saveNewPost({ ...data });
+        console.log({ response });
     }
 
     return (
