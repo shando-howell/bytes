@@ -6,7 +6,7 @@ export default async function Home() {
   return (
     <div>
       <main>
-        <div className="p-2">
+        <div className="p-2 flex">
           <h1>Latest Post</h1>
         </div>
         {!data &&

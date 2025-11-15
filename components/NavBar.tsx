@@ -1,4 +1,5 @@
 import Link from "next/link"
+import AuthButtons from "./AuthButtons"
 
 const NavBar = () => {
   return (
@@ -6,8 +7,7 @@ const NavBar = () => {
         <header className="flex p-2">
             <Link href="/" className="flex-1 uppercase tracking-widest">Bytes</Link>
             <div className="flex">
-              <Link href="/admin" className="px-2">Admin Dashboard</Link>
-              <h2 className="text-white">{new Date().toLocaleDateString()}</h2>
+              <AuthButtons />
             </div>
         </header>
     </div>
